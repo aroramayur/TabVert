@@ -1,0 +1,13 @@
+{
+    "manifest_version":2,
+    "name":"TabVert",
+    "description":"Shows all the open tabs vertically. Just hover over one to activate",
+    "version":"1.0",
+    "browser_action":{
+        "default_icon":"resources/tabvert_icon.png",
+        "default_title":"Get all the tabs listed vertically",
+        "default_popup":"views/tabvert.html"
+    },
+    "permissions":["tabs"]
+    
+}
