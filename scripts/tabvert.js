@@ -1,9 +1,14 @@
 window.addEventListener("load",function(){
-    chrome.tabs.query({},function(tabArray){
-        showTabs(tabArray);
+    chrome.tabs.query({},function(tabs){
+        createTabs(tabs);
     })
 });
 
-function showTabs(tabs){
-    console.log(tabs)
+function createTabs(tabs){
+    var tabObjects = [];
+    tabs.forEach(function(tab){
+        var tabObj = new Tab(tab.title,tab.url,tab.favIconUrl,tab.id);
+        tabObjects.push(tabObj);
+    });
+    createVM(tabObjects);
 }

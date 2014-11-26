@@ -3,7 +3,16 @@
         <title>TabVert - Get All the Tabs Listed Vertically</title>
     </head>
     <body>
-        <span id="tabs"></span>        
-       <script src="/scripts/tabvert.js"></script>         
+        
+        <div data-bind='foreach:tabs'>
+            <p>               
+                 <img data-bind="attr:{src:faviconUrl,title:title},event:{click:$parent.tabGlimpse}" height="20" width="20"></img>                
+                                                        
+            </p>                            
+        </div>        
+       <script src="/scripts/tabvert.js"></script> 
+        <script src="/scripts/knockout-3.2.0.js"></script>
+        <script src="/scripts/tab.js"></script>
+        <script src="/scripts/viewmodel.js"></script>
     </body>
 </html>
