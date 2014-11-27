@@ -1,5 +1,5 @@
 window.addEventListener("load",function(){
-    chrome.tabs.query({},function(tabs){
+    chrome.tabs.query({currentWindow:true},function(tabs){
         createTabs(tabs);
     })
 });
