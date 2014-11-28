@@ -1,5 +1,5 @@
 window.addEventListener("load",function(){
-    chrome.tabs.query({currentWindow:true},function(tabs){
+    chrome.tabs.query({},function(tabs){
         createTabs(tabs);
     })
 });
@@ -7,7 +7,7 @@ window.addEventListener("load",function(){
 function createTabs(tabs){
     var tabObjects = [];
     tabs.forEach(function(tab){
-        var tabObj = new Tab(tab.title,tab.url,tab.favIconUrl,tab.id);
+        var tabObj = new Tab(tab.title,tab.url,tab.favIconUrl,tab.id,tab.windowId);
         tabObjects.push(tabObj);        
     });
     createVM(tabObjects);
