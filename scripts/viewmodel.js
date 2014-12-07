@@ -7,11 +7,20 @@ function createVM(tabObjects){
             });
             chrome.windows.update(index.windowId,{focused:true},function(window) {
             console.log("Window Id : " + window.id + " focused");                
-           });                        
+           }); 
+            
+        };   
+        var removeBookmarks = ko.observable(false);        
+        var addBookmark = function(index) {
+            chrome.bookmarks.create({title:index.title,url:index.url});            
+            index.path('Other bookmarks');
+                     return true;
         }        
         return {
             tabs:tabs,
-            tabGlimpse:tabGlimpse
+            removeBookmarks:removeBookmarks,
+            tabGlimpse:tabGlimpse,
+            addBookmark:addBookmark            
         }
     })();
     ko.applyBindings(vm);

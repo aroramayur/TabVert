@@ -1,14 +1,15 @@
 {
     "manifest_version":2,
     "name":"TabVert",
-    "description":"Shows all the open tabs vertically - from all open windows. Just click over one to activate",
-    "version":"1.2",
+    "description":"Shows tabs from all open windows,with paths to existing bookmarks, or lets you bookmark",
+    "version":"1.4",
     "browser_action":{
         "default_icon":"resources/tabvert_icon.png",
         "default_title":"Get all the tabs listed vertically",
         "default_popup":"views/tabvert.html"
     },
-    "permissions":["tabs","storage"],
+    "permissions":["tabs","storage","bookmarks"],
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+   
     
 }
