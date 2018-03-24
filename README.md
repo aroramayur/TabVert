@@ -1,7 +1,7 @@
 TabVert
 =======
 
-So what this does is pretty simple. Nothing NASAesque here . 
+So what this does is pretty simple. 
 
 It lists all open tabs across <b>all open windows</b> vertically - just those pretty favicons really and lets you move 
 seamlessly across them. Shows paths to existing bookmarks and lets you create new ones under 'other bookmarks'
